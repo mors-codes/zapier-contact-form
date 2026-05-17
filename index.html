@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Get in Touch</h1>
+            <p class="subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        placeholder="John Doe"
+                        required
+                    >
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="john@example.com"
+                        required
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        placeholder="How can we help?"
+                        required
+                    >
+                    <span class="error-message" id="subjectError"></span>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder="Your message here..."
+                        required
+                    ></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-loader"></span>
+                </button>
+            </form>
+
+            <!-- Success Message -->
+            <div class="message-container success-message" id="successMessage">
+                <div class="success-icon">✓</div>
+                <h2>Message Sent!</h2>
+                <p>Thank you for reaching out. We'll get back to you soon.</p>
+            </div>
+
+            <!-- Error Message -->
+            <div class="message-container error-container" id="errorMessage">
+                <div class="error-icon">✕</div>
+                <h2>Oops! Something went wrong</h2>
+                <p>We couldn't send your message. Please try again later.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
